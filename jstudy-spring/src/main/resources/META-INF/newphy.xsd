@@ -3,7 +3,9 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:beans="http://www.springframework.org/schema/beans"
 	targetNamespace="http://www.newphy.cn/schema/newphy"
 	elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xsd:import namespace="http://www.springframework.org/schema/beans" />
+	
+	<xsd:import namespace="http://www.springframework.org/schema/beans"/>
+	
 	<xsd:element name="people">
 		<xsd:complexType>
 			<xsd:complexContent>

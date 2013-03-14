@@ -6,6 +6,15 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resources"/>
+        <dependent-module archiveName="jstudy-common-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jstudy-common/jstudy-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="niufei-core-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/niufei-core/niufei-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="niufei-spring-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/niufei-spring/niufei-spring">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="jstudy-spring"/>
         <property name="java-output-path" value="/jstudy-spring/target/classes"/>
     </wb-module>

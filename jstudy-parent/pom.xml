@@ -20,17 +20,37 @@
 	</repositories>
 
 	<properties>
+		<jstudy.version>1.0.0</jstudy.version>
+		<niufei.version>1.0.0</niufei.version>
 		<spring.version>3.1.1.RELEASE</spring.version>
 		<quartz.version>2.1.6</quartz.version>
 		<slf4j.version>1.6.4</slf4j.version>
 		<jetty.version>7.6.3.v20120416</jetty.version>
 		<jackson.version>2.0.1</jackson.version>
+		<h2.version>1.3.166</h2.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>cn.newphy</groupId>
+				<artifactId>jstudy-common</artifactId>
+				<version>${jstudy.version}</version>
+			</dependency>	
+			
+			<dependency>
+				<groupId>cn.newphy</groupId>
+				<artifactId>niufei-core</artifactId>
+				<version>${niufei.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>cn.newphy</groupId>
+				<artifactId>niufei-spring</artifactId>
+				<version>${niufei.version}</version>
+			</dependency>					
+		
 			<!--***** spring ***** -->
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -69,6 +89,11 @@
 				<artifactId>spring-tx</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>			
 			<dependency>
 				<groupId>org.aspectj</groupId>
 				<artifactId>aspectjrt</artifactId>
@@ -155,6 +180,24 @@
 				<artifactId>guava</artifactId>
 				<version>11.0.2</version>
 			</dependency>
+			
+			<dependency>
+				<groupId>com.h2database</groupId>
+				<artifactId>h2</artifactId>
+				<version>${h2.version}</version>
+			</dependency>	
+			
+			<!-- optional datasource pool -->
+			<dependency>
+				<groupId>c3p0</groupId>
+				<artifactId>c3p0</artifactId>
+				<version>0.9.1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>c3p0</groupId>
+				<artifactId>c3p0-oracle-thin-extras</artifactId>
+				<version>0.9.0.2</version>
+			</dependency>				
 
 			<!-- jetty -->
 			<dependency>
